@@ -1,0 +1,9 @@
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\obj\Debug\AclGrammarTests.csprojResolveAssemblyReference.cache
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\bin\Debug\AclGrammarTests.dll
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\bin\Debug\AclGrammarTests.pdb
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\bin\Debug\AclGrammar.dll
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\bin\Debug\Antlr4.Runtime.dll
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\bin\Debug\AclGrammar.pdb
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\bin\Debug\Antlr4.Runtime.xml
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\obj\Debug\AclGrammarTests.dll
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammarTests\obj\Debug\AclGrammarTests.pdb

@@ -1,0 +1,14 @@
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\bin\Debug\AclGrammar.dll
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\bin\Debug\AclGrammar.pdb
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\bin\Debug\Antlr4.Runtime.dll
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\bin\Debug\Antlr4.Runtime.xml
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclScriptLexer.cs
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclScriptParser.cs
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclScriptListener.cs
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclScriptBaseListener.cs
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclScriptVisitor.cs
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclScriptBaseVisitor.cs
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclGrammar.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclGrammar.dll
+c:\users\tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclGrammar.pdb
+C:\Users\Tom\documents\visual studio 2013\Projects\AclGrammar\AclGrammar\obj\Debug\AclGrammar.csprojResolveAssemblyReference.cache
