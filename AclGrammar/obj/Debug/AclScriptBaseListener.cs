@@ -36,201 +36,6 @@ using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 [System.CLSCompliant(false)]
 public partial class AclScriptBaseListener : IAclScriptListener {
 	/// <summary>
-	/// Enter a parse tree produced by the <c>stringFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterStringFunction([NotNull] AclScriptParser.StringFunctionContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>stringFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitStringFunction([NotNull] AclScriptParser.StringFunctionContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>string</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterString([NotNull] AclScriptParser.StringContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>string</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitString([NotNull] AclScriptParser.StringContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>stringAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>stringAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>stringParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>stringParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>concatenate</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterConcatenate([NotNull] AclScriptParser.ConcatenateContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>concatenate</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitConcatenate([NotNull] AclScriptParser.ConcatenateContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>numberPlusDate</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>numberPlusDate</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>time</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTime([NotNull] AclScriptParser.TimeContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>time</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTime([NotNull] AclScriptParser.TimeContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>datePlusNumber</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>datePlusNumber</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>dateFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDateFunction([NotNull] AclScriptParser.DateFunctionContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>dateFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDateFunction([NotNull] AclScriptParser.DateFunctionContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>dateParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>dateParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>date</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDate([NotNull] AclScriptParser.DateContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>date</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDate([NotNull] AclScriptParser.DateContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>datetime</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDatetime([NotNull] AclScriptParser.DatetimeContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>datetime</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDatetime([NotNull] AclScriptParser.DatetimeContext context) { }
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>dateAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by the <c>dateAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context) { }
-
-	/// <summary>
 	/// Enter a parse tree produced by the <c>subtract</c>
 	/// labeled alternative in <see cref="AclScriptParser.numExpr"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -424,6 +229,201 @@ public partial class AclScriptBaseListener : IAclScriptListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitNumParenthesis([NotNull] AclScriptParser.NumParenthesisContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>stringFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStringFunction([NotNull] AclScriptParser.StringFunctionContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>stringFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStringFunction([NotNull] AclScriptParser.StringFunctionContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>string</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterString([NotNull] AclScriptParser.StringContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>string</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitString([NotNull] AclScriptParser.StringContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>stringAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>stringAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>stringParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>stringParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>concatenate</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterConcatenate([NotNull] AclScriptParser.ConcatenateContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>concatenate</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitConcatenate([NotNull] AclScriptParser.ConcatenateContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>numberPlusDate</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>numberPlusDate</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>time</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTime([NotNull] AclScriptParser.TimeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>time</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTime([NotNull] AclScriptParser.TimeContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>datePlusNumber</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>datePlusNumber</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>dateFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDateFunction([NotNull] AclScriptParser.DateFunctionContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>dateFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDateFunction([NotNull] AclScriptParser.DateFunctionContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>dateParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>dateParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>date</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDate([NotNull] AclScriptParser.DateContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>date</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDate([NotNull] AclScriptParser.DateContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>datetime</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDatetime([NotNull] AclScriptParser.DatetimeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>datetime</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDatetime([NotNull] AclScriptParser.DatetimeContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>dateAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>dateAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="AclScriptParser.func"/>.
@@ -1217,6 +1217,968 @@ public partial class AclScriptBaseListener : IAclScriptListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitLast([NotNull] AclScriptParser.LastContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.leading"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLeading([NotNull] AclScriptParser.LeadingContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.leading"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLeading([NotNull] AclScriptParser.LeadingContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.length"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLength([NotNull] AclScriptParser.LengthContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.length"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLength([NotNull] AclScriptParser.LengthContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.levdist"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLevdist([NotNull] AclScriptParser.LevdistContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.levdist"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLevdist([NotNull] AclScriptParser.LevdistContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.log"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLog([NotNull] AclScriptParser.LogContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.log"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLog([NotNull] AclScriptParser.LogContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.lower"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLower([NotNull] AclScriptParser.LowerContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.lower"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLower([NotNull] AclScriptParser.LowerContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.ltrim"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLtrim([NotNull] AclScriptParser.LtrimContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.ltrim"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLtrim([NotNull] AclScriptParser.LtrimContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.map"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMap([NotNull] AclScriptParser.MapContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.map"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMap([NotNull] AclScriptParser.MapContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.mask"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMask([NotNull] AclScriptParser.MaskContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.mask"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMask([NotNull] AclScriptParser.MaskContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.match"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMatch([NotNull] AclScriptParser.MatchContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.match"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMatch([NotNull] AclScriptParser.MatchContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.maximum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMaximum([NotNull] AclScriptParser.MaximumContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.maximum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMaximum([NotNull] AclScriptParser.MaximumContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.minimum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMinimum([NotNull] AclScriptParser.MinimumContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.minimum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMinimum([NotNull] AclScriptParser.MinimumContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.minute"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMinute([NotNull] AclScriptParser.MinuteContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.minute"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMinute([NotNull] AclScriptParser.MinuteContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.mod"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMod([NotNull] AclScriptParser.ModContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.mod"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMod([NotNull] AclScriptParser.ModContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.month"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterMonth([NotNull] AclScriptParser.MonthContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.month"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitMonth([NotNull] AclScriptParser.MonthContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.nominal"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterNominal([NotNull] AclScriptParser.NominalContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.nominal"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitNominal([NotNull] AclScriptParser.NominalContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.normdist"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterNormdist([NotNull] AclScriptParser.NormdistContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.normdist"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitNormdist([NotNull] AclScriptParser.NormdistContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.normsinv"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterNormsinv([NotNull] AclScriptParser.NormsinvContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.normsinv"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitNormsinv([NotNull] AclScriptParser.NormsinvContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.now"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterNow([NotNull] AclScriptParser.NowContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.now"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitNow([NotNull] AclScriptParser.NowContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.nper"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterNper([NotNull] AclScriptParser.NperContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.nper"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitNper([NotNull] AclScriptParser.NperContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.occurs"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterOccurs([NotNull] AclScriptParser.OccursContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.occurs"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitOccurs([NotNull] AclScriptParser.OccursContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.offsetnum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterOffsetnum([NotNull] AclScriptParser.OffsetnumContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.offsetnum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitOffsetnum([NotNull] AclScriptParser.OffsetnumContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.offsetstr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterOffsetstr([NotNull] AclScriptParser.OffsetstrContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.offsetstr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitOffsetstr([NotNull] AclScriptParser.OffsetstrContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.offsetdtm"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterOffsetdtm([NotNull] AclScriptParser.OffsetdtmContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.offsetdtm"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitOffsetdtm([NotNull] AclScriptParser.OffsetdtmContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.omit"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterOmit([NotNull] AclScriptParser.OmitContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.omit"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitOmit([NotNull] AclScriptParser.OmitContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.packed"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterPacked([NotNull] AclScriptParser.PackedContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.packed"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitPacked([NotNull] AclScriptParser.PackedContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pi"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterPi([NotNull] AclScriptParser.PiContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pi"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitPi([NotNull] AclScriptParser.PiContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pmt"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterPmt([NotNull] AclScriptParser.PmtContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pmt"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitPmt([NotNull] AclScriptParser.PmtContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.ppmt"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterPpmt([NotNull] AclScriptParser.PpmtContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.ppmt"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitPpmt([NotNull] AclScriptParser.PpmtContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.proper"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterProper([NotNull] AclScriptParser.ProperContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.proper"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitProper([NotNull] AclScriptParser.ProperContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.properties"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterProperties([NotNull] AclScriptParser.PropertiesContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.properties"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitProperties([NotNull] AclScriptParser.PropertiesContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pvannuity"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterPvannuity([NotNull] AclScriptParser.PvannuityContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pvannuity"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitPvannuity([NotNull] AclScriptParser.PvannuityContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pvlumpsum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterPvlumpsum([NotNull] AclScriptParser.PvlumpsumContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pvlumpsum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitPvlumpsum([NotNull] AclScriptParser.PvlumpsumContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.rand"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRand([NotNull] AclScriptParser.RandContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.rand"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRand([NotNull] AclScriptParser.RandContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.rate"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRate([NotNull] AclScriptParser.RateContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.rate"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRate([NotNull] AclScriptParser.RateContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.reclen"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterReclen([NotNull] AclScriptParser.ReclenContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.reclen"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitReclen([NotNull] AclScriptParser.ReclenContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recno"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRecno([NotNull] AclScriptParser.RecnoContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recno"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRecno([NotNull] AclScriptParser.RecnoContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recoffsetstr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRecoffsetstr([NotNull] AclScriptParser.RecoffsetstrContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recoffsetstr"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRecoffsetstr([NotNull] AclScriptParser.RecoffsetstrContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recoffsetnum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRecoffsetnum([NotNull] AclScriptParser.RecoffsetnumContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recoffsetnum"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRecoffsetnum([NotNull] AclScriptParser.RecoffsetnumContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recoffsetdtm"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRecoffsetdtm([NotNull] AclScriptParser.RecoffsetdtmContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recoffsetdtm"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRecoffsetdtm([NotNull] AclScriptParser.RecoffsetdtmContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.regexfind"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRegexfind([NotNull] AclScriptParser.RegexfindContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.regexfind"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRegexfind([NotNull] AclScriptParser.RegexfindContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.regexreplace"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRegexreplace([NotNull] AclScriptParser.RegexreplaceContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.regexreplace"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRegexreplace([NotNull] AclScriptParser.RegexreplaceContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.remove"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRemove([NotNull] AclScriptParser.RemoveContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.remove"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRemove([NotNull] AclScriptParser.RemoveContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.repeat"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRepeat([NotNull] AclScriptParser.RepeatContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.repeat"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRepeat([NotNull] AclScriptParser.RepeatContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.replace"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterReplace([NotNull] AclScriptParser.ReplaceContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.replace"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitReplace([NotNull] AclScriptParser.ReplaceContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.reverse"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterReverse([NotNull] AclScriptParser.ReverseContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.reverse"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitReverse([NotNull] AclScriptParser.ReverseContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.rjustify"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRjustify([NotNull] AclScriptParser.RjustifyContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.rjustify"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRjustify([NotNull] AclScriptParser.RjustifyContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.root"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRoot([NotNull] AclScriptParser.RootContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.root"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRoot([NotNull] AclScriptParser.RootContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.round"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRound([NotNull] AclScriptParser.RoundContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.round"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRound([NotNull] AclScriptParser.RoundContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.second"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSecond([NotNull] AclScriptParser.SecondContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.second"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSecond([NotNull] AclScriptParser.SecondContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.shift"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterShift([NotNull] AclScriptParser.ShiftContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.shift"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitShift([NotNull] AclScriptParser.ShiftContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.sin"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSin([NotNull] AclScriptParser.SinContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.sin"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSin([NotNull] AclScriptParser.SinContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.soundex"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSoundex([NotNull] AclScriptParser.SoundexContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.soundex"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSoundex([NotNull] AclScriptParser.SoundexContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.soundslike"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSoundslike([NotNull] AclScriptParser.SoundslikeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.soundslike"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSoundslike([NotNull] AclScriptParser.SoundslikeContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.split"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSplit([NotNull] AclScriptParser.SplitContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.split"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSplit([NotNull] AclScriptParser.SplitContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stod"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStod([NotNull] AclScriptParser.StodContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stod"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStod([NotNull] AclScriptParser.StodContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stodt"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStodt([NotNull] AclScriptParser.StodtContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stodt"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStodt([NotNull] AclScriptParser.StodtContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stot"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStot([NotNull] AclScriptParser.StotContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stot"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStot([NotNull] AclScriptParser.StotContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stringf"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStringf([NotNull] AclScriptParser.StringfContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stringf"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStringf([NotNull] AclScriptParser.StringfContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.substring"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSubstring([NotNull] AclScriptParser.SubstringContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.substring"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSubstring([NotNull] AclScriptParser.SubstringContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.tan"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTan([NotNull] AclScriptParser.TanContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.tan"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTan([NotNull] AclScriptParser.TanContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.test"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTest([NotNull] AclScriptParser.TestContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.test"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTest([NotNull] AclScriptParser.TestContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.timef"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTimef([NotNull] AclScriptParser.TimefContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.timef"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTimef([NotNull] AclScriptParser.TimefContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.today"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterToday([NotNull] AclScriptParser.TodayContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.today"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitToday([NotNull] AclScriptParser.TodayContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.transform"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTransform([NotNull] AclScriptParser.TransformContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.transform"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTransform([NotNull] AclScriptParser.TransformContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.trim"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTrim([NotNull] AclScriptParser.TrimContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.trim"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTrim([NotNull] AclScriptParser.TrimContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.unsigned"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterUnsigned([NotNull] AclScriptParser.UnsignedContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.unsigned"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitUnsigned([NotNull] AclScriptParser.UnsignedContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.upper"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterUpper([NotNull] AclScriptParser.UpperContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.upper"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitUpper([NotNull] AclScriptParser.UpperContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.utod"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterUtod([NotNull] AclScriptParser.UtodContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.utod"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitUtod([NotNull] AclScriptParser.UtodContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.value"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterValue([NotNull] AclScriptParser.ValueContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.value"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitValue([NotNull] AclScriptParser.ValueContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.verify"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterVerify([NotNull] AclScriptParser.VerifyContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.verify"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitVerify([NotNull] AclScriptParser.VerifyContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.workday"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterWorkday([NotNull] AclScriptParser.WorkdayContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.workday"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitWorkday([NotNull] AclScriptParser.WorkdayContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.year"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterYear([NotNull] AclScriptParser.YearContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.year"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitYear([NotNull] AclScriptParser.YearContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.zoned"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterZoned([NotNull] AclScriptParser.ZonedContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.zoned"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitZoned([NotNull] AclScriptParser.ZonedContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.zstat"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterZstat([NotNull] AclScriptParser.ZstatContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.zstat"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitZstat([NotNull] AclScriptParser.ZstatContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="AclScriptParser.expr"/>.

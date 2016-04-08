@@ -25,6 +25,41 @@ numFunc    : abs
 		   | fvschedule
 		   | intf
 		   | ipmt
+		   | length
+		   | levdist
+		   | log
+		   | maximum
+		   | minimum
+		   | minute
+		   | mod
+		   | month
+		   | nominal
+		   | normdist
+		   | normsinv
+		   | nper
+		   | occurs
+		   | offsetnum
+		   | packed
+		   | pi
+		   | pmt
+		   | ppmt
+		   | pvannuity
+		   | pvlumpsum
+		   | rand
+		   | rate
+		   | reclen
+		   | recno
+		   | recoffsetnum
+		   | root
+		   | round
+		   | second
+		   | sin
+		   | tan
+		   | unsigned
+		   | value
+		   | workday
+		   | year
+		   | zstat
 		   ;
 datetimeFunc: ctod
            | ctodt
@@ -32,6 +67,14 @@ datetimeFunc: ctod
 		   | eomonth
 		   | gomonth
 		   | hour
+		   | now
+		   | offsetdtm
+		   | recoffsetdtm
+		   | stod
+		   | stodt
+		   | stot
+		   | today
+		   | utod
 		   ;
 stringFunc : alltrim
            | bintostr
@@ -57,12 +100,43 @@ stringFunc : alltrim
 		   | include
 		   | insert
 		   | last
+		   | leading
+		   | lower
+		   | ltrim
+		   | mask
+		   | offsetstr
+		   | omit
+		   | proper
+		   | properties
+		   | recoffsetstr
+		   | regexfind
+		   | regexreplace
+		   | remove
+		   | repeat
+		   | replace
+		   | reverse
+		   | rjustify
+		   | shift
+		   | soundex
+		   | split
+		   | stringf
+		   | substring
+		   | timef
+		   | transform
+		   | trim
+		   | upper
+		   | zoned
            ;
 boolFunc   : between
            | find
 		   | isblank
 		   | isdefined
 		   | isfuzzydup
+		   | map
+		   | match
+		   | soundslike
+		   | test
+		   | verify
            ;
 
 //Functions
@@ -125,6 +199,84 @@ isblank    : ISBLANK fStart stringExpr fEnd ;
 isdefined  : ISDEFINED fStart stringExpr fEnd ;
 isfuzzydup : ISFUZZYDUP fStart stringExpr sep stringExpr sep numExpr (sep numExpr)? fEnd ;
 last       : LAST fStart stringExpr sep numExpr fEnd ;
+leading    : LEADING fStart numExpr sep numExpr fEnd ;
+length     : LENGTH fStart stringExpr fEnd ;
+levdist    : LEVDIST fStart stringExpr sep stringExpr (sep boolExpr)? fEnd ;
+log        : LOG fStart numExpr sep numExpr fEnd ;
+lower      : LOWER fStart stringExpr fEnd ;
+ltrim      : LTRIM fStart stringExpr fEnd ;
+map        : MAP fStart stringExpr sep stringExpr fEnd ;
+mask       : MASK fStart stringExpr sep stringExpr fEnd ;
+match      : MATCH fStart stringExpr (sep stringExpr)+ fEnd
+           | MATCH fStart numExpr (sep numExpr)+ fEnd
+		   | MATCH fStart datetimeExpr (sep datetimeExpr)+ fEnd
+		   | MATCH fStart boolExpr (sep boolExpr)+ fEnd
+		   ;
+maximum    : MAXIMUM fStart numExpr sep numExpr fEnd ;
+minimum    : MINIMUM fStart numExpr sep numExpr fEnd ;
+minute     : MINUTE fStart datetimeExpr fEnd ;
+mod        : MOD fStart numExpr sep numExpr fEnd ;
+month      : MONTH fStart datetimeExpr fEnd ;
+nominal    : NOMINAL fStart numExpr sep numExpr fEnd ;
+normdist   : NORMDIST fStart numExpr sep numExpr sep numExpr sep boolExpr fEnd ;
+normsinv   : NORMSINV fStart numExpr fEnd ;
+now        : NOW fStart fEnd ;
+nper       : NPER fStart numExpr sep numExpr sep numExpr (sep numExpr)? fEnd ;
+occurs     : OCCURS fStart stringExpr sep stringExpr fEnd ;
+offsetnum  : OFFSET fStart numExpr sep numExpr fEnd ;
+offsetstr  : OFFSET fStart stringExpr sep numExpr fEnd ;
+offsetdtm  : OFFSET fStart datetimeExpr sep numExpr fEnd ;
+omit       : OMIT fStart stringExpr sep stringExpr (sep boolExpr)? fEnd ;
+packed     : PACKED fStart numExpr sep numExpr fEnd ;
+pi         : PI fStart fEnd ;
+pmt        : PMT fStart numExpr sep numExpr sep numExpr (sep numExpr)? fEnd ;
+ppmt       : PPMT fStart numExpr sep numExpr sep numExpr sep numExpr (sep numExpr)? fEnd ;
+proper     : PROPER fStart stringExpr fEnd ;
+properties : PROPERTIES fStart stringExpr sep stringExpr sep stringExpr fEnd ;
+pvannuity  : PVANNUITY fStart numExpr sep numExpr sep numExpr (sep numExpr)? fEnd ;
+pvlumpsum  : PVLUMPSUM fStart numExpr sep numExpr sep numExpr fEnd ;
+rand       : RAND fStart numExpr fEnd ;
+rate       : RATE fStart numExpr sep numExpr sep numExpr fEnd ;
+reclen     : RECLEN fStart fEnd ;
+recno      : RECNO fStart fEnd ;
+recoffsetstr: RECOFFSET fStart stringExpr sep numExpr fEnd ;
+recoffsetnum: RECOFFSET fStart numExpr sep numExpr fEnd ;
+recoffsetdtm: RECOFFSET fStart datetimeExpr sep numExpr fEnd ;
+regexfind  : REGEXFIND fStart stringExpr sep stringExpr fEnd ;
+regexreplace: REGEXREPLACE fStart stringExpr sep stringExpr sep stringExpr fEnd ;
+remove     : REMOVE fStart stringExpr sep stringExpr fEnd ;
+repeat     : REPEAT fStart stringExpr sep numExpr fEnd ;
+replace    : REPLACE fStart stringExpr sep stringExpr sep stringExpr fEnd ;
+reverse    : REVERSE fStart stringExpr fEnd ;
+rjustify   : RJUSTIFY fStart stringExpr fEnd ;
+root       : ROOT fStart numExpr sep numExpr fEnd ;
+round      : ROUND fStart numExpr fEnd ;
+second     : SECOND fStart datetimeExpr fEnd ;
+shift      : SHIFT fStart stringExpr sep numExpr fEnd ;
+sin        : SIN fStart numExpr fEnd ;
+soundex    : SOUNDEX fStart stringExpr fEnd ;
+soundslike : SOUNDSLIKE fStart stringExpr sep stringExpr fEnd ;
+split      : SPLIT fStart stringExpr sep stringExpr sep numExpr (sep stringExpr)? fEnd ;
+stod       : STOD fStart numExpr (sep datetimeExpr)? fEnd ;
+stodt      : STODT fStart numExpr (sep datetimeExpr)? fEnd ;
+stot       : STOT fStart numExpr (sep datetimeExpr)? fEnd ;
+stringf    : STRINGF fStart numExpr sep numExpr (sep stringExpr)? fEnd ;
+substring  : SUBSTRING fStart stringExpr sep numExpr sep numExpr fEnd ;
+tan        : TAN fStart numExpr fEnd ;
+test       : TEST fStart numExpr sep stringExpr fEnd ;
+timef      : TIMEF fStart (datetimeExpr (sep stringExpr)?)? fEnd ;
+today      : TODAY fStart fEnd ;
+transform  : TRANSFORM fStart stringExpr fEnd ;
+trim       : TRIM fStart stringExpr fEnd ;
+unsigned   : UNSIGNED fStart numExpr sep numExpr fEnd ;
+upper      : UPPER fStart stringExpr fEnd ;
+utod       : UTOD fStart stringExpr (sep stringExpr (sep numExpr)?)? fEnd ;
+value      : VALUE fStart stringExpr sep numExpr fEnd ;
+verify     : VERIFY fStart (stringExpr | numExpr | datetimeExpr) fEnd ;
+workday    : WORKDAY fStart datetimeExpr sep datetimeExpr (sep stringExpr)? fEnd ;
+year       : YEAR fStart datetimeExpr fEnd ;
+zoned      : ZONED fStart numExpr sep numExpr fEnd ;
+zstat      : ZSTAT fStart numExpr sep numExpr sep numExpr fEnd ;
 
 //Expressions
 expr       : numExpr
@@ -244,6 +396,76 @@ ISBLANK    : [iI][sS][bB]([lL]([aA]([nN][kK]?)?)?)? ;
 ISDEFINED  : [iI][sS][dD]([eE]([fF]([iI]([nN]([eE][dD]?)?)?)?)?)? ;
 ISFUZZYDUP : [iI][sS][fF]([uU]([zZ]([zZ]([yY]([dD]([uU][pP]?)?)?)?)?)?)? ;
 LAST       : [lL][aA]([sS][tT]?)? ;
+LEADING    : [lL][eE][aA]([dD]([iI]([nN][gG]?)?)?)? ;
+LENGTH     : [lL][eE][nN]([gG]([tT][hH]?)?)? ;
+LEVDIST    : [lL][eE][vV]([dD]([iI]([sS][tT]?)?)?)? ;
+LOG        : [lL][oO][gG] ;
+LOWER      : [lL][oO][wW]([eE][rR]?)? ;
+LTRIM      : [lL][tT]([rR]([iI][mM]?)?)? ;
+MAP        : [mM][aA][pP] ;
+MASK       : [mM][aA][sS][kK]? ;
+MATCH      : [mM][aA][tT]([cC][hH]?)? ;
+MAXIMUM    : [mM][aA][xX]([iI]([mM]([uU][mM]?)?)?)? ;
+MINIMUM    : [mM][iI][nN]([iI]([mM]([uU][mM]?)?)?)? ;
+MINUTE     : [mM][iI][nN][uU]([tT][eE]?)? ;
+MOD        : [mM][oO][dD] ;
+MONTH      : [mM][oO][nN]([tT][hH]?)? ;
+NOMINAL    : [nN][oO][mM]([iI]([nN]([aA][lL]?)?)?)? ;
+NORMDIST   : [nN][oO][rR][mM][dD]([iI]([sS][tT]?)?)? ;
+NORMSINV   : [nN][oO][rR][mM][sS]([iI]([nN][vV]?)?)? ;
+NOW        : [nN][oO][wW] ;
+NPER       : [nN][pP][eE][rR] ;
+OCCURS     : [oO][cC]([cC]([uU]([rR][sS]?)?)?)? ;
+OFFSET     : [oO][fF][fF]([sS]([eE][tT]?)?)? ;
+OMIT       : [oO][mM]([iI][tT]?)? ;
+PACKED     : [pP][aA]([cC]([kK]([eE][dD]?)?)?)? ;
+PI         : [pP][iI] ;
+PMT        : [pP][mM][tT]? ;
+PPMT       : [pP][pP]([mM][tT]?)? ;
+PROPER     : [pP][rR][oO][pP][eE][rR] ;
+PROPERTIES : [pP][rR][oO][pP][eE][rR][tT]([iI]([eE][sS]?)?)? ;
+PVANNUITY  : [pP][vV][aA]([nN]([nN]([uU]([iI]([tT][yY]?)?)?)?)?)? ;
+PVLUMPSUM  : [pP][vV][lL]([uU]([mM]([pP]([sS]([uU][mM]?)?)?)?)?)? ;
+RAND       : [rR][aA][nN][dD]? ;
+RATE       : [rR][aA][tT][eE]? ;
+RECLEN     : [rR][eE][cC][lL]([eE][nN]?)? ;
+RECNO      : [rR][eE][cC][nN][oO]? ;
+RECOFFSET  : [rR][eE][cC][oO]([fF]([fF]([sS]([eE][tT]?)?)?)?)? ;
+REGEXFIND  : [rR][eE][gG][eE][xX][fF]([iI]([nN][dD]?)?)? ;
+REGEXREPLACE: [rR][eE][gG][eE][xX][rR]([eE]([pP]([lL]([aA]([cC][eE]?)?)?)?)?)? ;
+REMOVE     : [rR][eE][mM]([oO]([vV][eE]?)?)? ;
+REPEAT     : [rR][eE][pP][eE]([aA][tT]?)? ;
+REPLACE    : [rR][eE][pP][lL]([aA]([cC][eE]?)?)? ;
+REVERSE    : [rR][eE][vV]([eE]([rR]([sS][eE]?)?)?)? ;
+RJUSTIFY   : [rR][jJ]([uU]([sS]([tT]([iI]([fF][yY]?)?)?)?)?)? ;
+ROOT       : [rR][oO][oO][tT]? ;
+ROUND      : [rR][oO][uU]([nN][dD]?)? ;
+SECOND     : [sS][eE]([cC]([oO]([nN][dD]?)?)?)? ;
+SHIFT      : [sS][hH]([iI]([fF][tT]?)?)? ;
+SIN        : [sS][iI][nN]? ;
+SOUNDEX    : [sS][oO][uU][nN][dD][eE][xX]? ;
+SOUNDSLIKE : [sS][oO][uU][nN][dD][sS]([lL]([iI]([kK][eE]?)?)?)? ;
+SPLIT      : [sS][pP]([lL]([iI][tT]?)?)? ;
+STOD       : [sS][tT][oO][dD] ;
+STODT      : [sS][tT][oO][dD][tT] ;
+STOT       : [sS][tT][oO][tT] ;
+STRINGF    : [sS][tT][rR]([iI]([nN][gG]?)?)? ;
+SUBSTRING  : [sS][uU]([bB]([sS]([tT]([rR]([iI]([nN][gG]?)?)?)?)?)?)? ;
+TAN        : [tT][aA][nN]? ;
+TEST       : [tT][eE]([sS][tT]?)? ;
+TIMEF      : [tT][iI]([mM][eE]?)? ;
+TODAY      : [tT][oO]([dD]([aA][yY]?)?)? ;
+TRANSFORM  : [tT][rR][aA]([nN]([sS]([fF]([oO]([rR][mM]?)?)?)?)?)? ;
+TRIM       : [tT][rR][iI][mM]? ;
+UNSIGNED   : [uU][nN]([sS]([iI]([gG]([nN]([eE][dD]?)?)?)?)?)? ;
+UPPER      : [uU][pP]([pP]([eE][rR]?)?)? ;
+UTOD       : [uU][tT]([oO][dD]?)? ;
+VALUE      : [vV][aA]([lL]([uU][eE]?)?)? ;
+VERIFY     : [vV][eE]([rR]([iI]([fF][yY]?)?)?)? ;
+WORKDAY    : [wW]([oO]([rR]([kK]([dD]([aA][yY]?)?)?)?)?)? ;
+YEAR       : [yY]([eE]([aA][rR]?)?)? ;
+ZONED      : [zZ][oO]([nN]([eE][dD]?)?)? ;
+ZSTAT      : [zZ][sS]([tT]([aA][tT]?)?)? ;
 
 //Values
 BOOLOPS    : '>' | '<' | '=' | '>=' | '<=' | '<>' ;

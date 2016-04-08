@@ -32,175 +32,6 @@ using IToken = Antlr4.Runtime.IToken;
 [System.CLSCompliant(false)]
 public interface IAclScriptListener : IParseTreeListener {
 	/// <summary>
-	/// Enter a parse tree produced by the <c>stringFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterStringFunction([NotNull] AclScriptParser.StringFunctionContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>stringFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitStringFunction([NotNull] AclScriptParser.StringFunctionContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>string</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterString([NotNull] AclScriptParser.StringContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>string</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitString([NotNull] AclScriptParser.StringContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>stringAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>stringAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>stringParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>stringParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>concatenate</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterConcatenate([NotNull] AclScriptParser.ConcatenateContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>concatenate</c>
-	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitConcatenate([NotNull] AclScriptParser.ConcatenateContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>numberPlusDate</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>numberPlusDate</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>time</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTime([NotNull] AclScriptParser.TimeContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>time</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTime([NotNull] AclScriptParser.TimeContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>datePlusNumber</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>datePlusNumber</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>dateFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterDateFunction([NotNull] AclScriptParser.DateFunctionContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>dateFunction</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitDateFunction([NotNull] AclScriptParser.DateFunctionContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>dateParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>dateParenthesis</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>date</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterDate([NotNull] AclScriptParser.DateContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>date</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitDate([NotNull] AclScriptParser.DateContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>datetime</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterDatetime([NotNull] AclScriptParser.DatetimeContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>datetime</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitDatetime([NotNull] AclScriptParser.DatetimeContext context);
-
-	/// <summary>
-	/// Enter a parse tree produced by the <c>dateAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>dateAclObjectName</c>
-	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context);
-
-	/// <summary>
 	/// Enter a parse tree produced by the <c>subtract</c>
 	/// labeled alternative in <see cref="AclScriptParser.numExpr"/>.
 	/// </summary>
@@ -368,6 +199,175 @@ public interface IAclScriptListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitNumParenthesis([NotNull] AclScriptParser.NumParenthesisContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>stringFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStringFunction([NotNull] AclScriptParser.StringFunctionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>stringFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStringFunction([NotNull] AclScriptParser.StringFunctionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>string</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterString([NotNull] AclScriptParser.StringContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>string</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitString([NotNull] AclScriptParser.StringContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>stringAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>stringAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStringAclObjectName([NotNull] AclScriptParser.StringAclObjectNameContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>stringParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>stringParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStringParenthesis([NotNull] AclScriptParser.StringParenthesisContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>concatenate</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterConcatenate([NotNull] AclScriptParser.ConcatenateContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>concatenate</c>
+	/// labeled alternative in <see cref="AclScriptParser.stringExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitConcatenate([NotNull] AclScriptParser.ConcatenateContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>numberPlusDate</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>numberPlusDate</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNumberPlusDate([NotNull] AclScriptParser.NumberPlusDateContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>time</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTime([NotNull] AclScriptParser.TimeContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>time</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTime([NotNull] AclScriptParser.TimeContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>datePlusNumber</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>datePlusNumber</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDatePlusNumber([NotNull] AclScriptParser.DatePlusNumberContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>dateFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDateFunction([NotNull] AclScriptParser.DateFunctionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>dateFunction</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDateFunction([NotNull] AclScriptParser.DateFunctionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>dateParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>dateParenthesis</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDateParenthesis([NotNull] AclScriptParser.DateParenthesisContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>date</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDate([NotNull] AclScriptParser.DateContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>date</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDate([NotNull] AclScriptParser.DateContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>datetime</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDatetime([NotNull] AclScriptParser.DatetimeContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>datetime</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDatetime([NotNull] AclScriptParser.DatetimeContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>dateAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>dateAclObjectName</c>
+	/// labeled alternative in <see cref="AclScriptParser.datetimeExpr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="AclScriptParser.func"/>.
@@ -1039,6 +1039,820 @@ public interface IAclScriptListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitLast([NotNull] AclScriptParser.LastContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.leading"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLeading([NotNull] AclScriptParser.LeadingContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.leading"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLeading([NotNull] AclScriptParser.LeadingContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.length"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLength([NotNull] AclScriptParser.LengthContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.length"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLength([NotNull] AclScriptParser.LengthContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.levdist"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLevdist([NotNull] AclScriptParser.LevdistContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.levdist"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLevdist([NotNull] AclScriptParser.LevdistContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.log"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLog([NotNull] AclScriptParser.LogContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.log"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLog([NotNull] AclScriptParser.LogContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.lower"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLower([NotNull] AclScriptParser.LowerContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.lower"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLower([NotNull] AclScriptParser.LowerContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.ltrim"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLtrim([NotNull] AclScriptParser.LtrimContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.ltrim"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLtrim([NotNull] AclScriptParser.LtrimContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.map"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMap([NotNull] AclScriptParser.MapContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.map"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMap([NotNull] AclScriptParser.MapContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.mask"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMask([NotNull] AclScriptParser.MaskContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.mask"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMask([NotNull] AclScriptParser.MaskContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.match"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMatch([NotNull] AclScriptParser.MatchContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.match"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMatch([NotNull] AclScriptParser.MatchContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.maximum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMaximum([NotNull] AclScriptParser.MaximumContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.maximum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMaximum([NotNull] AclScriptParser.MaximumContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.minimum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMinimum([NotNull] AclScriptParser.MinimumContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.minimum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMinimum([NotNull] AclScriptParser.MinimumContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.minute"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMinute([NotNull] AclScriptParser.MinuteContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.minute"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMinute([NotNull] AclScriptParser.MinuteContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.mod"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMod([NotNull] AclScriptParser.ModContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.mod"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMod([NotNull] AclScriptParser.ModContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.month"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMonth([NotNull] AclScriptParser.MonthContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.month"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMonth([NotNull] AclScriptParser.MonthContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.nominal"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNominal([NotNull] AclScriptParser.NominalContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.nominal"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNominal([NotNull] AclScriptParser.NominalContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.normdist"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNormdist([NotNull] AclScriptParser.NormdistContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.normdist"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNormdist([NotNull] AclScriptParser.NormdistContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.normsinv"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNormsinv([NotNull] AclScriptParser.NormsinvContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.normsinv"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNormsinv([NotNull] AclScriptParser.NormsinvContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.now"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNow([NotNull] AclScriptParser.NowContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.now"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNow([NotNull] AclScriptParser.NowContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.nper"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNper([NotNull] AclScriptParser.NperContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.nper"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNper([NotNull] AclScriptParser.NperContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.occurs"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterOccurs([NotNull] AclScriptParser.OccursContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.occurs"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitOccurs([NotNull] AclScriptParser.OccursContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.offsetnum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterOffsetnum([NotNull] AclScriptParser.OffsetnumContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.offsetnum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitOffsetnum([NotNull] AclScriptParser.OffsetnumContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.offsetstr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterOffsetstr([NotNull] AclScriptParser.OffsetstrContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.offsetstr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitOffsetstr([NotNull] AclScriptParser.OffsetstrContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.offsetdtm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterOffsetdtm([NotNull] AclScriptParser.OffsetdtmContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.offsetdtm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitOffsetdtm([NotNull] AclScriptParser.OffsetdtmContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.omit"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterOmit([NotNull] AclScriptParser.OmitContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.omit"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitOmit([NotNull] AclScriptParser.OmitContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.packed"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPacked([NotNull] AclScriptParser.PackedContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.packed"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPacked([NotNull] AclScriptParser.PackedContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pi"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPi([NotNull] AclScriptParser.PiContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pi"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPi([NotNull] AclScriptParser.PiContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pmt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPmt([NotNull] AclScriptParser.PmtContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pmt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPmt([NotNull] AclScriptParser.PmtContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.ppmt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPpmt([NotNull] AclScriptParser.PpmtContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.ppmt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPpmt([NotNull] AclScriptParser.PpmtContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.proper"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterProper([NotNull] AclScriptParser.ProperContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.proper"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitProper([NotNull] AclScriptParser.ProperContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.properties"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterProperties([NotNull] AclScriptParser.PropertiesContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.properties"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitProperties([NotNull] AclScriptParser.PropertiesContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pvannuity"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPvannuity([NotNull] AclScriptParser.PvannuityContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pvannuity"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPvannuity([NotNull] AclScriptParser.PvannuityContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.pvlumpsum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPvlumpsum([NotNull] AclScriptParser.PvlumpsumContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.pvlumpsum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPvlumpsum([NotNull] AclScriptParser.PvlumpsumContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.rand"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRand([NotNull] AclScriptParser.RandContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.rand"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRand([NotNull] AclScriptParser.RandContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.rate"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRate([NotNull] AclScriptParser.RateContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.rate"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRate([NotNull] AclScriptParser.RateContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.reclen"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterReclen([NotNull] AclScriptParser.ReclenContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.reclen"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitReclen([NotNull] AclScriptParser.ReclenContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recno"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRecno([NotNull] AclScriptParser.RecnoContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recno"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRecno([NotNull] AclScriptParser.RecnoContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recoffsetstr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRecoffsetstr([NotNull] AclScriptParser.RecoffsetstrContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recoffsetstr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRecoffsetstr([NotNull] AclScriptParser.RecoffsetstrContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recoffsetnum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRecoffsetnum([NotNull] AclScriptParser.RecoffsetnumContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recoffsetnum"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRecoffsetnum([NotNull] AclScriptParser.RecoffsetnumContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.recoffsetdtm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRecoffsetdtm([NotNull] AclScriptParser.RecoffsetdtmContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.recoffsetdtm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRecoffsetdtm([NotNull] AclScriptParser.RecoffsetdtmContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.regexfind"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRegexfind([NotNull] AclScriptParser.RegexfindContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.regexfind"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRegexfind([NotNull] AclScriptParser.RegexfindContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.regexreplace"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRegexreplace([NotNull] AclScriptParser.RegexreplaceContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.regexreplace"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRegexreplace([NotNull] AclScriptParser.RegexreplaceContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.remove"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRemove([NotNull] AclScriptParser.RemoveContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.remove"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRemove([NotNull] AclScriptParser.RemoveContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.repeat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRepeat([NotNull] AclScriptParser.RepeatContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.repeat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRepeat([NotNull] AclScriptParser.RepeatContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.replace"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterReplace([NotNull] AclScriptParser.ReplaceContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.replace"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitReplace([NotNull] AclScriptParser.ReplaceContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.reverse"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterReverse([NotNull] AclScriptParser.ReverseContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.reverse"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitReverse([NotNull] AclScriptParser.ReverseContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.rjustify"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRjustify([NotNull] AclScriptParser.RjustifyContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.rjustify"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRjustify([NotNull] AclScriptParser.RjustifyContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.root"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRoot([NotNull] AclScriptParser.RootContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.root"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRoot([NotNull] AclScriptParser.RootContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.round"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRound([NotNull] AclScriptParser.RoundContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.round"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRound([NotNull] AclScriptParser.RoundContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.second"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSecond([NotNull] AclScriptParser.SecondContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.second"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSecond([NotNull] AclScriptParser.SecondContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.shift"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterShift([NotNull] AclScriptParser.ShiftContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.shift"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitShift([NotNull] AclScriptParser.ShiftContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.sin"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSin([NotNull] AclScriptParser.SinContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.sin"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSin([NotNull] AclScriptParser.SinContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.soundex"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSoundex([NotNull] AclScriptParser.SoundexContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.soundex"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSoundex([NotNull] AclScriptParser.SoundexContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.soundslike"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSoundslike([NotNull] AclScriptParser.SoundslikeContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.soundslike"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSoundslike([NotNull] AclScriptParser.SoundslikeContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.split"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSplit([NotNull] AclScriptParser.SplitContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.split"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSplit([NotNull] AclScriptParser.SplitContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stod"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStod([NotNull] AclScriptParser.StodContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stod"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStod([NotNull] AclScriptParser.StodContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stodt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStodt([NotNull] AclScriptParser.StodtContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stodt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStodt([NotNull] AclScriptParser.StodtContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stot"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStot([NotNull] AclScriptParser.StotContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stot"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStot([NotNull] AclScriptParser.StotContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.stringf"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStringf([NotNull] AclScriptParser.StringfContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.stringf"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStringf([NotNull] AclScriptParser.StringfContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.substring"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSubstring([NotNull] AclScriptParser.SubstringContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.substring"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSubstring([NotNull] AclScriptParser.SubstringContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.tan"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTan([NotNull] AclScriptParser.TanContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.tan"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTan([NotNull] AclScriptParser.TanContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.test"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTest([NotNull] AclScriptParser.TestContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.test"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTest([NotNull] AclScriptParser.TestContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.timef"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTimef([NotNull] AclScriptParser.TimefContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.timef"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTimef([NotNull] AclScriptParser.TimefContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.today"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterToday([NotNull] AclScriptParser.TodayContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.today"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitToday([NotNull] AclScriptParser.TodayContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.transform"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTransform([NotNull] AclScriptParser.TransformContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.transform"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTransform([NotNull] AclScriptParser.TransformContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.trim"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTrim([NotNull] AclScriptParser.TrimContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.trim"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTrim([NotNull] AclScriptParser.TrimContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.unsigned"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterUnsigned([NotNull] AclScriptParser.UnsignedContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.unsigned"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitUnsigned([NotNull] AclScriptParser.UnsignedContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.upper"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterUpper([NotNull] AclScriptParser.UpperContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.upper"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitUpper([NotNull] AclScriptParser.UpperContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.utod"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterUtod([NotNull] AclScriptParser.UtodContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.utod"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitUtod([NotNull] AclScriptParser.UtodContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.value"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterValue([NotNull] AclScriptParser.ValueContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.value"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitValue([NotNull] AclScriptParser.ValueContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.verify"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterVerify([NotNull] AclScriptParser.VerifyContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.verify"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitVerify([NotNull] AclScriptParser.VerifyContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.workday"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterWorkday([NotNull] AclScriptParser.WorkdayContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.workday"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitWorkday([NotNull] AclScriptParser.WorkdayContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.year"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterYear([NotNull] AclScriptParser.YearContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.year"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitYear([NotNull] AclScriptParser.YearContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.zoned"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterZoned([NotNull] AclScriptParser.ZonedContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.zoned"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitZoned([NotNull] AclScriptParser.ZonedContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="AclScriptParser.zstat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterZstat([NotNull] AclScriptParser.ZstatContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="AclScriptParser.zstat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitZstat([NotNull] AclScriptParser.ZstatContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="AclScriptParser.expr"/>.
