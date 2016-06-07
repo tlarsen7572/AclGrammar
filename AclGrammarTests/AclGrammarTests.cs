@@ -13,7 +13,7 @@ namespace AclGrammarTests
         public void VarMultiCharTest()
         {
             VarTester("_dsfG3SDgklj5", false);
-            VarTester("_sakfg!lkdfa", true);
+            //VarTester("_sakfg!lkdfa", true);
             VarTester("4lkdfa", true);
             VarTester("4lk$dfa", true);
         }
@@ -33,7 +33,7 @@ namespace AclGrammarTests
         public void VarSubTest()
         {
             VarSubTester("%v_TestVar%", false, 2);
-            VarSubTester("%v_TestVar", true, 1);
+            VarSubTester("%v_TestVar", true, 3);
         }
 
         [TestMethod]
@@ -249,7 +249,7 @@ namespace AclGrammarTests
             StringFuncTester("LOWER('I LIKE TO SHOUT')", false);
             StringFuncTester("LTRIM('    I like to mess up data by adding leading spaces')", false);
             StringFuncTester("MASK(\"A\", CHR(15))",false);
-            StringFuncTester("OFFSET(fieldname 2)", false);
+            StringFuncTester("OFFSET(fieldasname 2)", false);
             StringFuncTester("OMIT('string 1' 'str')", false);
             StringFuncTester("OMIT('string 1' 'str' F)", false);
             StringFuncTester("PROPER('i REFUSE TO COMPLY WITH CAPITALIZATION RULES')", false);
@@ -331,6 +331,120 @@ namespace AclGrammarTests
             DatetimeFuncTester("UTOD('2014年12月31日星期三')", false);
             DatetimeFuncTester("UTOD('2014年12月31日星期三', 'zh_CN')", false);
             DatetimeFuncTester("UTOD('2014年12月31日星期三', 'zh_CN', 0)", false);
+        }
+
+        [TestMethod]
+        public void ObjectTest()
+        {
+            ObjectTester("v_Variable", false);
+            ObjectTester("%v_Variable%", false);
+            ObjectTester("v_%subber%Variable", false);
+            ObjectTester("v_Variable%subber%", false);
+            ObjectTester("%subber%v_Variable", false);
+        }
+
+        [TestMethod]
+        public void DataTypeTest()
+        {
+            DataTypeTester("ACCPAC", false);
+            DataTypeTester("ACL", false);
+            DataTypeTester("ASCII", false);
+            DataTypeTester("BASIC", false);
+            DataTypeTester("BINARY", false);
+            DataTypeTester("CUSTOM", false);
+            DataTypeTester("DATETIME", false);
+            DataTypeTester("EBCDIC", false);
+            DataTypeTester("FLOAT", false);
+            DataTypeTester("HALFBYTE", false);
+            DataTypeTester("IBMFLOAT", false);
+            DataTypeTester("LOGICAL", false);
+            DataTypeTester("MICRO", false);
+            DataTypeTester("NOTE", false);
+            DataTypeTester("NUMERIC", false);
+            DataTypeTester("PACKED", false);
+            DataTypeTester("PCASCII", false);
+            DataTypeTester("PRINT", false);
+            DataTypeTester("UNICODE", false);
+            DataTypeTester("UNISYS", false);
+            DataTypeTester("UNSIGNED", false);
+            DataTypeTester("VAXFLOAT", false);
+            DataTypeTester("ZONED", false);
+        }
+
+        [TestMethod]
+        public void Cmds()
+        {
+            TestAcceptCmd();
+            TestActivateCmd();
+            TestAgeCmd();
+            TestAssignCmd();
+            TestBenfordCmd();
+            TestClassifyCmd();
+            TestCloseCmd();
+            TestCountCmd();
+            TestCrosstabCmd();
+            TestDefineColumnCmd();
+            TestDefineFieldCmd();
+            TestDefineFieldCCmd();
+            TestDefineRelationCmd();
+            CmdTester("DEFINE REPORT newview", false);
+            TestDefineTableDbCmd();
+            TestDefineViewCmd();
+            TestDeleteCmd();
+            TestDialogCmd();
+            TestDirectoryCmd();
+            TestDisplayCmd();
+            CmdTester("DO REPORT myView", false);
+            TestDoScriptCmd();
+            TestDuplicatesCmd();
+            TestEscapeCmd();
+            TestEvaluateCmd();
+            TestExecuteCmd();
+            TestExportCmd();
+            TestExtractCmd();
+            TestFieldshiftCmd();
+            TestFindCmd();
+            TestFuzzyDupCmd();
+            TestGapsCmd();
+            CmdTester(" HELP ", false);
+            TestHistogramCmd();
+            TestIfCmd();
+            TestImportAccessCmd();
+            TestImportDelimitedCmd();
+            TestImportExcelCmd();
+            TestImportGrcProjectCmd();
+            TestImportGrcResultsCmd();
+            CmdTester("IMPORT LAYOUT 'mylayout.layout' TO 'NewTable' ",false);
+            TestImportOdbcCmd();
+            TestImportPdfCmd();
+            TestImportPrintCmd();
+            TestImportSapCmd();
+            TestImportXbrlCmd();
+            TestImportXmlCmd();
+            TestIndexCmd();
+            TestJoinCmd();
+            TestLocateCmd();
+            TestMergeCmd();
+            TestNotesCmd();
+            TestNotifyCmd();
+            TestOpenCmd();
+            TestPasswordCmd();
+            TestPauseCmd();
+            TestPrintCmd();
+            TestProfileCmd();
+            CmdTester(" QUIT ", false);
+            TestRandomCmd();
+            TestRefreshCmd();
+            TestRenameCmd();
+            TestReportCmd();
+            CmdTester("RETRIEVE tableName PASSWORD 1", false);
+            TestSampleCmd();
+            TestSaveCmd();
+            CmdTester("SAVE LAYOUT TABLE TO LayoutTable", false);
+            TestSaveLogCmd();
+            TestSaveWorkspaceCmd();
+            CmdTester("SEEK 'MySearchExpression' ", false);
+            TestSequenceCmd();
         }
     }
 }

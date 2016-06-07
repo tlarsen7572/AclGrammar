@@ -241,6 +241,1819 @@ public interface IAclScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitDateAclObjectName([NotNull] AclScriptParser.DateAclObjectNameContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.command"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCommand([NotNull] AclScriptParser.CommandContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.accept"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAccept([NotNull] AclScriptParser.AcceptContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.activate"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitActivate([NotNull] AclScriptParser.ActivateContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.agecmd"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAgecmd([NotNull] AclScriptParser.AgecmdContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.agecmdP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAgecmdP([NotNull] AclScriptParser.AgecmdPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.assign"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAssign([NotNull] AclScriptParser.AssignContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.benford"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBenford([NotNull] AclScriptParser.BenfordContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.benfordP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBenfordP([NotNull] AclScriptParser.BenfordPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.calculate"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCalculate([NotNull] AclScriptParser.CalculateContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.classify"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitClassify([NotNull] AclScriptParser.ClassifyContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.classifyP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitClassifyP([NotNull] AclScriptParser.ClassifyPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.close"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitClose([NotNull] AclScriptParser.CloseContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.count"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCount([NotNull] AclScriptParser.CountContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.countP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCountP([NotNull] AclScriptParser.CountPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.crosstab"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCrosstab([NotNull] AclScriptParser.CrosstabContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.crosstabP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCrosstabP([NotNull] AclScriptParser.CrosstabPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definecol"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinecol([NotNull] AclScriptParser.DefinecolContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definecolP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinecolP([NotNull] AclScriptParser.DefinecolPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definefld"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinefld([NotNull] AclScriptParser.DefinefldContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definefldc"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinefldc([NotNull] AclScriptParser.DefinefldcContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definerel"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinerel([NotNull] AclScriptParser.DefinerelContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definerelP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinerelP([NotNull] AclScriptParser.DefinerelPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definerpt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinerpt([NotNull] AclScriptParser.DefinerptContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definetabdb"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinetabdb([NotNull] AclScriptParser.DefinetabdbContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.definetabdbP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefinetabdbP([NotNull] AclScriptParser.DefinetabdbPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.defineview"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefineview([NotNull] AclScriptParser.DefineviewContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.defineviewP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDefineviewP([NotNull] AclScriptParser.DefineviewPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.delete"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDelete([NotNull] AclScriptParser.DeleteContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.dialog"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDialog([NotNull] AclScriptParser.DialogContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.dialogstd"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDialogstd([NotNull] AclScriptParser.DialogstdContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.dialogat"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDialogat([NotNull] AclScriptParser.DialogatContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.directory"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDirectory([NotNull] AclScriptParser.DirectoryContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.directoryP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDirectoryP([NotNull] AclScriptParser.DirectoryPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.display"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDisplay([NotNull] AclScriptParser.DisplayContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.doreport"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDoreport([NotNull] AclScriptParser.DoreportContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.doscript"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDoscript([NotNull] AclScriptParser.DoscriptContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.doscriptP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDoscriptP([NotNull] AclScriptParser.DoscriptPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.duplicates"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDuplicates([NotNull] AclScriptParser.DuplicatesContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.duplicatesP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDuplicatesP([NotNull] AclScriptParser.DuplicatesPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.escape"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitEscape([NotNull] AclScriptParser.EscapeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.evaluate"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitEvaluate([NotNull] AclScriptParser.EvaluateContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.execute"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExecute([NotNull] AclScriptParser.ExecuteContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.executeP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExecuteP([NotNull] AclScriptParser.ExecutePContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.export"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExport([NotNull] AclScriptParser.ExportContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.exportP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExportP([NotNull] AclScriptParser.ExportPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.extract"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExtract([NotNull] AclScriptParser.ExtractContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.extractP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExtractP([NotNull] AclScriptParser.ExtractPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldshift"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldshift([NotNull] AclScriptParser.FieldshiftContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldshiftP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldshiftP([NotNull] AclScriptParser.FieldshiftPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.find"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFind([NotNull] AclScriptParser.FindContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fuzzydup"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFuzzydup([NotNull] AclScriptParser.FuzzydupContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fuzzydupP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFuzzydupP([NotNull] AclScriptParser.FuzzydupPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.gaps"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitGaps([NotNull] AclScriptParser.GapsContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.gapsP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitGapsP([NotNull] AclScriptParser.GapsPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.help"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitHelp([NotNull] AclScriptParser.HelpContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.histogram"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitHistogram([NotNull] AclScriptParser.HistogramContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.histogramP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitHistogramP([NotNull] AclScriptParser.HistogramPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.if"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIf([NotNull] AclScriptParser.IfContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importacc"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportacc([NotNull] AclScriptParser.ImportaccContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importaccP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportaccP([NotNull] AclScriptParser.ImportaccPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importdel"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportdel([NotNull] AclScriptParser.ImportdelContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importdelP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportdelP([NotNull] AclScriptParser.ImportdelPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importxl"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportxl([NotNull] AclScriptParser.ImportxlContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importxlP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportxlP([NotNull] AclScriptParser.ImportxlPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importgrcp"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportgrcp([NotNull] AclScriptParser.ImportgrcpContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importgrcr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportgrcr([NotNull] AclScriptParser.ImportgrcrContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importlayout"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportlayout([NotNull] AclScriptParser.ImportlayoutContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importodbc"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportodbc([NotNull] AclScriptParser.ImportodbcContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importodbcP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportodbcP([NotNull] AclScriptParser.ImportodbcPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importpdf"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportpdf([NotNull] AclScriptParser.ImportpdfContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importpdfP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportpdfP([NotNull] AclScriptParser.ImportpdfPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importprint"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportprint([NotNull] AclScriptParser.ImportprintContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importprintP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportprintP([NotNull] AclScriptParser.ImportprintPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importsap"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportsap([NotNull] AclScriptParser.ImportsapContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importxbrl"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportxbrl([NotNull] AclScriptParser.ImportxbrlContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importxbrlP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportxbrlP([NotNull] AclScriptParser.ImportxbrlPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importxml"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportxml([NotNull] AclScriptParser.ImportxmlContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importxmlP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImportxmlP([NotNull] AclScriptParser.ImportxmlPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.index"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIndex([NotNull] AclScriptParser.IndexContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.indexP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIndexP([NotNull] AclScriptParser.IndexPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.join"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitJoin([NotNull] AclScriptParser.JoinContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.joinP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitJoinP([NotNull] AclScriptParser.JoinPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.locate"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLocate([NotNull] AclScriptParser.LocateContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.merge"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitMerge([NotNull] AclScriptParser.MergeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.mergeP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitMergeP([NotNull] AclScriptParser.MergePContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.notes"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNotes([NotNull] AclScriptParser.NotesContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.notesP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNotesP([NotNull] AclScriptParser.NotesPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.notify"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNotify([NotNull] AclScriptParser.NotifyContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.notifyP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNotifyP([NotNull] AclScriptParser.NotifyPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.open"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOpen([NotNull] AclScriptParser.OpenContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.openP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOpenP([NotNull] AclScriptParser.OpenPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.password"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPassword([NotNull] AclScriptParser.PasswordContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.pause"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPause([NotNull] AclScriptParser.PauseContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.print"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPrint([NotNull] AclScriptParser.PrintContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.profile"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitProfile([NotNull] AclScriptParser.ProfileContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.profileP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitProfileP([NotNull] AclScriptParser.ProfilePContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.quit"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitQuit([NotNull] AclScriptParser.QuitContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.random"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRandom([NotNull] AclScriptParser.RandomContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.randomP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRandomP([NotNull] AclScriptParser.RandomPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.refresh"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRefresh([NotNull] AclScriptParser.RefreshContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.rename"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRename([NotNull] AclScriptParser.RenameContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.renameP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRenameP([NotNull] AclScriptParser.RenamePContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.report"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitReport([NotNull] AclScriptParser.ReportContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.reportP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitReportP([NotNull] AclScriptParser.ReportPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.retrieve"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRetrieve([NotNull] AclScriptParser.RetrieveContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sample"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSample([NotNull] AclScriptParser.SampleContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sampleP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSampleP([NotNull] AclScriptParser.SamplePContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sampleRec"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSampleRec([NotNull] AclScriptParser.SampleRecContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sampleMus"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSampleMus([NotNull] AclScriptParser.SampleMusContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.save"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSave([NotNull] AclScriptParser.SaveContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.savelayout"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSavelayout([NotNull] AclScriptParser.SavelayoutContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.savelog"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSavelog([NotNull] AclScriptParser.SavelogContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.savelogP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSavelogP([NotNull] AclScriptParser.SavelogPContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.saveworkspace"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSaveworkspace([NotNull] AclScriptParser.SaveworkspaceContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.seek"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSeek([NotNull] AclScriptParser.SeekContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sequence"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSequence([NotNull] AclScriptParser.SequenceContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sequenceP"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSequenceP([NotNull] AclScriptParser.SequencePContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.acceptFldParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAcceptFldParm([NotNull] AclScriptParser.AcceptFldParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.allParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAllParm([NotNull] AclScriptParser.AllParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.appendParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAppendParm([NotNull] AclScriptParser.AppendParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.asParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAsParm([NotNull] AclScriptParser.AsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.asyncParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAsyncParm([NotNull] AclScriptParser.AsyncParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.boundsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBoundsParm([NotNull] AclScriptParser.BoundsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.bufferlengthParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBufferlengthParm([NotNull] AclScriptParser.BufferlengthParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.charmaxParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCharmaxParm([NotNull] AclScriptParser.CharmaxParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.clearParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitClearParm([NotNull] AclScriptParser.ClearParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.columnsNumParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitColumnsNumParm([NotNull] AclScriptParser.ColumnsNumParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.columnsStrParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitColumnsStrParm([NotNull] AclScriptParser.ColumnsStrParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.consecutiveParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitConsecutiveParm([NotNull] AclScriptParser.ConsecutiveParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.countParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCountParm([NotNull] AclScriptParser.CountParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.confidenceParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitConfidenceParm([NotNull] AclScriptParser.ConfidenceParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.contextParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitContextParm([NotNull] AclScriptParser.ContextParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.crClearParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCrClearParm([NotNull] AclScriptParser.CrClearParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.crlfParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCrlfParm([NotNull] AclScriptParser.CrlfParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.cutoffParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCutoffParm([NotNull] AclScriptParser.CutoffParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.dbaseParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDbaseParm([NotNull] AclScriptParser.DbaseParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.diffPctParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDiffPctParm([NotNull] AclScriptParser.DiffPctParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.eofParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitEofParm([NotNull] AclScriptParser.EofParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.errorLimitParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitErrorLimitParm([NotNull] AclScriptParser.ErrorLimitParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.errorParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitErrorParm([NotNull] AclScriptParser.ErrorParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.exactParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExactParm([NotNull] AclScriptParser.ExactParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldAsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldAsParm([NotNull] AclScriptParser.FieldAsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldsParm([NotNull] AclScriptParser.FieldsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldSyntaxDel"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldSyntaxDel([NotNull] AclScriptParser.FieldSyntaxDelContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldSyntaxGrcR"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldSyntaxGrcR([NotNull] AclScriptParser.FieldSyntaxGrcRContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldSyntaxTxt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldSyntaxTxt([NotNull] AclScriptParser.FieldSyntaxTxtContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldSyntaxXbrl"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldSyntaxXbrl([NotNull] AclScriptParser.FieldSyntaxXbrlContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldSyntaxXl"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldSyntaxXl([NotNull] AclScriptParser.FieldSyntaxXlContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fieldSyntaxXml"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFieldSyntaxXml([NotNull] AclScriptParser.FieldSyntaxXmlContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.filterParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFilterParm([NotNull] AclScriptParser.FilterParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.firstNextParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFirstNextParm([NotNull] AclScriptParser.FirstNextParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fldOrSubtotalParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFldOrSubtotalParm([NotNull] AclScriptParser.FldOrSubtotalParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.footerParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFooterParm([NotNull] AclScriptParser.FooterParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.formatParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFormatParm([NotNull] AclScriptParser.FormatParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.freeParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFreeParm([NotNull] AclScriptParser.FreeParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.fromParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFromParm([NotNull] AclScriptParser.FromParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.headerParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitHeaderParm([NotNull] AclScriptParser.HeaderParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.heightParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitHeightParm([NotNull] AclScriptParser.HeightParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.ifParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIfParm([NotNull] AclScriptParser.IfParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.ifOrWhileParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIfOrWhileParm([NotNull] AclScriptParser.IfOrWhileParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.ignoreParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIgnoreParm([NotNull] AclScriptParser.IgnoreParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.indexObjParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIndexObjParm([NotNull] AclScriptParser.IndexObjParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.indexParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIndexParm([NotNull] AclScriptParser.IndexParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.interpretationParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitInterpretationParm([NotNull] AclScriptParser.InterpretationParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.intervalParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIntervalParm([NotNull] AclScriptParser.IntervalParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.intervalsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIntervalsParm([NotNull] AclScriptParser.IntervalsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.isKeyParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIsKeyParm([NotNull] AclScriptParser.IsKeyParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.isSchemaParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIsSchemaParm([NotNull] AclScriptParser.IsSchemaParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.isolocaleParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIsolocaleParm([NotNull] AclScriptParser.IsolocaleParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.itemtypeParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitItemtypeParm([NotNull] AclScriptParser.ItemtypeParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.keepTitleParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitKeepTitleParm([NotNull] AclScriptParser.KeepTitleParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.keyParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitKeyParm([NotNull] AclScriptParser.KeyParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.leadingParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLeadingParm([NotNull] AclScriptParser.LeadingParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.levdistanceParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLevdistanceParm([NotNull] AclScriptParser.LevdistanceParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.lfClearParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLfClearParm([NotNull] AclScriptParser.LfClearParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.lineParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLineParm([NotNull] AclScriptParser.LineParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.lineFldsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLineFldsParm([NotNull] AclScriptParser.LineFldsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.localParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLocalParm([NotNull] AclScriptParser.LocalParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.maximumParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitMaximumParm([NotNull] AclScriptParser.MaximumParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.memomaxParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitMemomaxParm([NotNull] AclScriptParser.MemomaxParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.minimumParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitMinimumParm([NotNull] AclScriptParser.MinimumParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.missingParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitMissingParm([NotNull] AclScriptParser.MissingParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.nDateTimeParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNDateTimeParm([NotNull] AclScriptParser.NDateTimeParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.noDupsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNoDupsParm([NotNull] AclScriptParser.NoDupsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.noZeroesParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNoZeroesParm([NotNull] AclScriptParser.NoZeroesParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.numberParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNumberParm([NotNull] AclScriptParser.NumberParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.okParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOkParm([NotNull] AclScriptParser.OkParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onAnyListParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnAnyListParm([NotNull] AclScriptParser.OnAnyListParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onOptAnyParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnOptAnyParm([NotNull] AclScriptParser.OnOptAnyParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onOptDateParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnOptDateParm([NotNull] AclScriptParser.OnOptDateParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onOptNumParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnOptNumParm([NotNull] AclScriptParser.OnOptNumParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onOptRecParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnOptRecParm([NotNull] AclScriptParser.OnOptRecParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onOptStrParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnOptStrParm([NotNull] AclScriptParser.OnOptStrParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onOptStrListParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnOptStrListParm([NotNull] AclScriptParser.OnOptStrListParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.onStrParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOnStrParm([NotNull] AclScriptParser.OnStrParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.openParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOpenParm([NotNull] AclScriptParser.OpenParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.orderParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOrderParm([NotNull] AclScriptParser.OrderParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.otherParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOtherParm([NotNull] AclScriptParser.OtherParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.overwriteParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOverwriteParm([NotNull] AclScriptParser.OverwriteParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.ownerParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOwnerParm([NotNull] AclScriptParser.OwnerParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.pageParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPageParm([NotNull] AclScriptParser.PageParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.pagesParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPagesParm([NotNull] AclScriptParser.PagesParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.parserParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitParserParm([NotNull] AclScriptParser.ParserParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.passwordParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPasswordParm([NotNull] AclScriptParser.PasswordParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.picParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPicParm([NotNull] AclScriptParser.PicParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.pkeyParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPkeyParm([NotNull] AclScriptParser.PkeyParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.positionParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPositionParm([NotNull] AclScriptParser.PositionParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.presortParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPresortParm([NotNull] AclScriptParser.PresortParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.qualifierParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitQualifierParm([NotNull] AclScriptParser.QualifierParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.recordSyntaxTxt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRecordSyntaxTxt([NotNull] AclScriptParser.RecordSyntaxTxtContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.relationParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRelationParm([NotNull] AclScriptParser.RelationParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.renamefield"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRenamefield([NotNull] AclScriptParser.RenamefieldContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.replacementParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitReplacementParm([NotNull] AclScriptParser.ReplacementParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.reportOnParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitReportOnParm([NotNull] AclScriptParser.ReportOnParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.resultsizeParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitResultsizeParm([NotNull] AclScriptParser.ResultsizeParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.rlinesParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRlinesParm([NotNull] AclScriptParser.RlinesParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.savefield"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSavefield([NotNull] AclScriptParser.SavefieldContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.schemaParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSchemaParm([NotNull] AclScriptParser.SchemaParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.secsortParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSecsortParm([NotNull] AclScriptParser.SecsortParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.seedParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSeedParm([NotNull] AclScriptParser.SeedParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.separatorParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSeparatorParm([NotNull] AclScriptParser.SeparatorParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.serverParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitServerParm([NotNull] AclScriptParser.ServerParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sessionParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSessionParm([NotNull] AclScriptParser.SessionParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sizeParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSizeParm([NotNull] AclScriptParser.SizeParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.skeyParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSkeyParm([NotNull] AclScriptParser.SkeyParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.skipParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSkipParm([NotNull] AclScriptParser.SkipParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sortParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSortParm([NotNull] AclScriptParser.SortParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sortedParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSortedParm([NotNull] AclScriptParser.SortedParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.sourceParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSourceParm([NotNull] AclScriptParser.SourceParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.startLineParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStartLineParm([NotNull] AclScriptParser.StartLineParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.startParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStartParm([NotNull] AclScriptParser.StartParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.statParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStatParm([NotNull] AclScriptParser.StatParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.subDirParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSubDirParm([NotNull] AclScriptParser.SubDirParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.subsampleParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSubsampleParm([NotNull] AclScriptParser.SubsampleParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.subtotalParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSubtotalParm([NotNull] AclScriptParser.SubtotalParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.summarizedParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummarizedParm([NotNull] AclScriptParser.SummarizedParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.summarizeParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummarizeParm([NotNull] AclScriptParser.SummarizeParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.suppressParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSuppressParm([NotNull] AclScriptParser.SuppressParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.tableParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitTableParm([NotNull] AclScriptParser.TableParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.testSyntaxTxt"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitTestSyntaxTxt([NotNull] AclScriptParser.TestSyntaxTxtContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.textParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitTextParm([NotNull] AclScriptParser.TextParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.titledParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitTitledParm([NotNull] AclScriptParser.TitledParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.toAnyParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitToAnyParm([NotNull] AclScriptParser.ToAnyParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.toObjParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitToObjParm([NotNull] AclScriptParser.ToObjParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.toStrParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitToStrParm([NotNull] AclScriptParser.ToStrParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.toStrScrParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitToStrScrParm([NotNull] AclScriptParser.ToStrScrParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.toStrScrPrntParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitToStrScrPrntParm([NotNull] AclScriptParser.ToStrScrPrntParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.unformattedParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitUnformattedParm([NotNull] AclScriptParser.UnformattedParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.unicodeParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitUnicodeParm([NotNull] AclScriptParser.UnicodeParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.uniqueParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitUniqueParm([NotNull] AclScriptParser.UniqueParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.userIdParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitUserIdParm([NotNull] AclScriptParser.UserIdParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.whereParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWhereParm([NotNull] AclScriptParser.WhereParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.whileParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWhileParm([NotNull] AclScriptParser.WhileParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.widthParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWidthParm([NotNull] AclScriptParser.WidthParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.withParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWithParm([NotNull] AclScriptParser.WithParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.withCommentsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWithCommentsParm([NotNull] AclScriptParser.WithCommentsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.withFieldsParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWithFieldsParm([NotNull] AclScriptParser.WithFieldsParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.worksheetParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWorksheetParm([NotNull] AclScriptParser.WorksheetParmContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.workspaceParm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWorkspaceParm([NotNull] AclScriptParser.WorkspaceParmContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="AclScriptParser.func"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -528,11 +2341,11 @@ public interface IAclScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitFilesize([NotNull] AclScriptParser.FilesizeContext context);
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AclScriptParser.find"/>.
+	/// Visit a parse tree produced by <see cref="AclScriptParser.findf"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitFind([NotNull] AclScriptParser.FindContext context);
+	Result VisitFindf([NotNull] AclScriptParser.FindfContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="AclScriptParser.frequency"/>.
@@ -1186,6 +2999,62 @@ public interface IAclScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitZstat([NotNull] AclScriptParser.ZstatContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.datatype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDatatype([NotNull] AclScriptParser.DatatypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.numtype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNumtype([NotNull] AclScriptParser.NumtypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.stringtype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStringtype([NotNull] AclScriptParser.StringtypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.datetimetype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDatetimetype([NotNull] AclScriptParser.DatetimetypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.booltype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBooltype([NotNull] AclScriptParser.BooltypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.exporttype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExporttype([NotNull] AclScriptParser.ExporttypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.importtype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitImporttype([NotNull] AclScriptParser.ImporttypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.graphtype"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitGraphtype([NotNull] AclScriptParser.GraphtypeContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="AclScriptParser.expr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -1221,6 +3090,20 @@ public interface IAclScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitBoolExpr([NotNull] AclScriptParser.BoolExprContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.boolops"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBoolops([NotNull] AclScriptParser.BoolopsContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.aclobject"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAclobject([NotNull] AclScriptParser.AclobjectContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="AclScriptParser.sep"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -1240,6 +3123,13 @@ public interface IAclScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitFEnd([NotNull] AclScriptParser.FEndContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.cend"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCend([NotNull] AclScriptParser.CendContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="AclScriptParser.testVARFLD"/>.
@@ -1296,5 +3186,33 @@ public interface IAclScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitTestDATETIME([NotNull] AclScriptParser.TestDATETIMEContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.dlQuery"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDlQuery([NotNull] AclScriptParser.DlQueryContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.bool"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBool([NotNull] AclScriptParser.BoolContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.any"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAny([NotNull] AclScriptParser.AnyContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AclScriptParser.keyword"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitKeyword([NotNull] AclScriptParser.KeywordContext context);
 }
 } // namespace AclGrammar
